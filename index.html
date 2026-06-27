@@ -738,9 +738,9 @@
       </div>
       <div class="form-grp">
         <label class="form-lbl">Notes *</label>
-        <textarea name="notes" class="form-ta" rows="4" maxlength="500" required 
+        <textarea name="notes" class="form-ta" rows="4" maxlength="1500" required 
                   placeholder="Tell us a bit about your business — we'll follow up to confirm a time that works."></textarea>
-        <div class="form-char" id="fcc">0/500</div>
+        <div class="form-char" id="fcc">0/1500</div>
       </div>
       <div class="hp-field">
         <input type="text" name="phone_alt" tabindex="-1" autocomplete="off" aria-hidden="true" />
@@ -857,7 +857,7 @@
   document.querySelectorAll('.reveal, .reveal-r').forEach(function(el) { obs.observe(el); });
 
   // Char counter
-  function uc(el) { document.getElementById('fcc').textContent = el.value.length + '/500'; }
+  function uc(el) { document.getElementById('fcc').textContent = el.value.length + '/1500'; }
 
   // Form
   async function handleSubmit(e) {
@@ -895,7 +895,7 @@
   }
   function resetForm() {
     document.getElementById('cform').reset();
-    document.getElementById('fcc').textContent = '0/500';
+    document.getElementById('fcc').textContent = '0/1500';
     document.getElementById('form-success').style.display = 'none';
     document.getElementById('cform').style.display = 'flex';
     var btn = document.getElementById('fsub');
